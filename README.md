@@ -1,6 +1,6 @@
-<p>
+# -----
 <img align="right" height="100" src="ai_semiconductors/static/ArgonneLogo.jpg"> <img align="left" height="100" src="ai_semiconductors/static/DIRECTlogo.png">
-</p>
+
 
 
 # AI Semiconductors
