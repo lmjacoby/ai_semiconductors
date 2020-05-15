@@ -22,3 +22,7 @@ The data to train our machine learning models came from our project supervisors 
 
 This project is part of the UW DIRECT Capstone 2020, and is supported by Argonne National Lab.
 <img height="100" align="right" src="ai_semiconductors/static/ArgonneLogo.jpg"> <img height="100" align="left" src="ai_semiconductors/static/DIRECTlogo.png">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8915c4e20dacc7410002e0f96ca8743e6f4c94ff
