@@ -4,16 +4,16 @@ from sklearn.ensemble import RandomForestRegressor
 from collections import defaultdict
 import pandas.api.types as ptypes
 
-from ai_semiconductors import RFR_LASSO
+from ai_semiconductors import rfr_lasso
 
 df_test = pd.read_csv('./unittest_dummy.csv', nrows=5)
-X_test, y_test = RFR_LASSO.descriptors_outputs(df_test, d_start=5, o=0)
+X_test, y_test = rfr_lasso.descriptors_outputs(df_test, d_start=5, o=0)
 
 
 def test_stratify_df():
     '''
     '''
-    b_test = RFR_LASSO.stratify_df(df_test, label_type=1, label_site=4)
+    b_test = rfr_lasso.stratify_df(df_test, label_type=1, label_site=4)
 
     assert b_test.shape[1] == 1, \
         'array shape is incorrect. should be ({}, 1), got ({}, {})'\
@@ -25,7 +25,7 @@ def test_stratify_df():
 def test_descriptors_outputs():
     ''
     ''
-    X_test, y_test = RFR_LASSO.descriptors_outputs(df_test, d_start=5, o=0)
+    X_test, y_test = rfr_lasso.descriptors_outputs(df_test, d_start=5, o=0)
 
     assert X_test.shape[1] == 5, \
         'array shape is incorrect. should be ({}, 7), got ({}, {})'\
@@ -46,7 +46,7 @@ def test_traintest():
     test_idx_test = np.array([3, 4])
 
     X_train_test, X_test_test, y_train_test, _ = \
-        RFR_LASSO.traintest(X_test, y_test, train_idx_test, test_idx_test)
+        rfr_lasso.traintest(X_test, y_test, train_idx_test, test_idx_test)
 
     assert len(X_train_test) >= len(X_test_test), \
         'more testing data points than training datapoints, make testsize \
@@ -64,7 +64,7 @@ def test_fit_predict():
     clf_test = RandomForestRegressor(random_state=130)
 
     trainpred_test, testpred_test = \
-        RFR_LASSO.fit_predict(X_train_test, y_train_test,
+        rfr_lasso.fit_predict(X_train_test, y_train_test,
                               X_test_test, clf_test)
 
     assert len(trainpred_test) >= len(testpred_test), \
@@ -83,7 +83,7 @@ def test_rmse():
     testpred_test = np.array([6.96804053, 6.99679452])
 
     train_rmse_test, test_rmse_test = \
-        RFR_LASSO.rmse(y_train_test, y_test_test, trainpred_test,
+        rfr_lasso.rmse(y_train_test, y_test_test, trainpred_test,
                        testpred_test)
 
     assert isinstance(train_rmse_test, np.float), \
@@ -102,7 +102,7 @@ def test_rmse_list():
     test_rmse_test = 3.4289289813688395
 
     train_list_test, test_list_test = \
-        RFR_LASSO.rmse_list(train_list_test, test_list_test, train_rmse_test,
+        rfr_lasso.rmse_list(train_list_test, test_list_test, train_rmse_test,
                             test_rmse_test)
 
     assert isinstance(train_list_test, list), \
@@ -121,7 +121,7 @@ def test_rmse_total():
 
     # for train_idx_test, test_idx_test in skf.split(df_test, b_test):
     train_list_test, test_list_test, X_train_test, y_train_test = \
-        RFR_LASSO.rmse_total(df_test, X_test, y_test, train_idx_test,
+        rfr_lasso.rmse_total(df_test, X_test, y_test, train_idx_test,
                              test_idx_test, clf_test, train_list_test,
                              test_list_test)
 
@@ -139,7 +139,7 @@ def test_rmse_table_ms():
     train_list_test = [1, 2, 3]
     test_list_test = [4, 5, 6]
 
-    rmse_df = RFR_LASSO.rmse_table_ms(train_list_test, test_list_test)
+    rmse_df = rfr_lasso.rmse_table_ms(train_list_test, test_list_test)
 
     assert isinstance(rmse_df.loc[3][0], str), \
         'mean/stddev val is of wrong type, should be string'
@@ -148,7 +148,7 @@ def test_rmse_table_ms():
 
 
 df2_test = pd.read_csv('./unittest_dummy.csv')
-X2_test, y2_test = RFR_LASSO.descriptors_outputs(df2_test, d_start=5, o=0)
+X2_test, y2_test = rfr_lasso.descriptors_outputs(df2_test, d_start=5, o=0)
 
 
 def test_df_tysi():
@@ -156,10 +156,10 @@ def test_df_tysi():
     test_idx_test = np.array(range(30, 40))
 
     train_idx_26_test, _, _, test_idx_26_test, _, _ = \
-        RFR_LASSO.df_tysi(df2_test, train_idx_test, test_idx_test, 'type')
+        rfr_lasso.df_tysi(df2_test, train_idx_test, test_idx_test, 'type')
 
     train_idx_sub_test, _, test_idx_sub_test, _ = \
-        RFR_LASSO.df_tysi(df2_test, train_idx_test, test_idx_test, 'site')
+        rfr_lasso.df_tysi(df2_test, train_idx_test, test_idx_test, 'site')
 
     assert len(train_idx_26_test) > 0, \
         'list of training indexes of sc type II-VI is empty, choose a larger \
@@ -184,10 +184,10 @@ def test_traintest_df_tysi():
          [0, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 6, 17, 18, 19, 20, 23, 24,
           25, 26, 27, 28, 29], [31, 32], [30, 33, 34, 35, 36, 37, 38, 39])
 
-    p_type = RFR_LASSO.traintest_df_tysi(X2_test, y2_test, 'type', tr26,
+    p_type = rfr_lasso.traintest_df_tysi(X2_test, y2_test, 'type', tr26,
                                          tr35, tr44, te26, te35, te44)
 
-    p_site = RFR_LASSO.traintest_df_tysi(X2_test, y2_test, 'site',
+    p_site = rfr_lasso.traintest_df_tysi(X2_test, y2_test, 'site',
                                          trsub, trint, tesub, teint)
 
     assert len(p_type) == 12, \
@@ -209,13 +209,13 @@ def test_make_xy_list():
          [0, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 6, 17, 18, 19, 20, 23, 24,
           25, 26, 27, 28, 29], [31, 32], [30, 33, 34, 35, 36, 37, 38, 39])
 
-    p_type = RFR_LASSO.traintest_df_tysi(X2_test, y2_test, 'type', tr26,
+    p_type = rfr_lasso.traintest_df_tysi(X2_test, y2_test, 'type', tr26,
                                          tr35, tr44, te26, te35, te44)
-    p_site = RFR_LASSO.traintest_df_tysi(X2_test, y2_test, 'site',
+    p_site = rfr_lasso.traintest_df_tysi(X2_test, y2_test, 'site',
                                          trsub, trint, tesub, teint)
 
-    xy_list_type = RFR_LASSO.make_xy_list(p_type, 'type')
-    xy_list_site = RFR_LASSO.make_xy_list(p_site, 'site')
+    xy_list_type = rfr_lasso.make_xy_list(p_type, 'type')
+    xy_list_site = rfr_lasso.make_xy_list(p_site, 'site')
 
     assert len(xy_list_type) == len(p_type)/4, \
         'xy list type does not have the correct num of tuples'
@@ -231,7 +231,7 @@ def test_fit_predict_tysi():
            y2_test.loc[[5, 9, 15, 19, 25, 29]], y2_test.loc[[35, 39]])
 
     trainpred_test, testpred_test = \
-        RFR_LASSO.fit_predict_tysi(clf_test, val, X_train_test, y_train_test)
+        rfr_lasso.fit_predict_tysi(clf_test, val, X_train_test, y_train_test)
 
     assert isinstance(trainpred_test[2], np.float), \
         'predicted value of wrong type, expected: float'
@@ -247,7 +247,7 @@ def test_rmse_tysi():
     testpred_test = np.array([7.00974634, 8.03254739])
 
     train_rmse_test, test_rmse_test = \
-        RFR_LASSO.rmse_tysi(val, trainpred_test, testpred_test)
+        rfr_lasso.rmse_tysi(val, trainpred_test, testpred_test)
 
     assert isinstance(train_rmse_test, np.float), \
         'predicted rmse of wrong type, expected: float'
@@ -269,12 +269,12 @@ def test_make_dict_tysi():
     test_dict_test = defaultdict(list)
 
     train_dict_test, test_dict_test = \
-        RFR_LASSO.make_dict_tysi(val, df2_test, train_rmse_test,
+        rfr_lasso.make_dict_tysi(val, df2_test, train_rmse_test,
                                  test_rmse_test, train_dict_test,
                                  test_dict_test, 'type')
 
     train_dict_test2, test_dict_test2 = \
-        RFR_LASSO.make_dict_tysi(val2, df2_test, train_rmse_test,
+        rfr_lasso.make_dict_tysi(val2, df2_test, train_rmse_test,
                                  test_rmse_test, train_dict_test,
                                  test_dict_test, 'site')
 
@@ -303,13 +303,13 @@ def test_wrapper_tysi():
     test_idx_test = np.array(range(30, 40))
 
     train_dict_test, test_dict_test = \
-        RFR_LASSO.wrapper_tysi(df2_test, clf_test, X_train_test, y_train_test,
+        rfr_lasso.wrapper_tysi(df2_test, clf_test, X_train_test, y_train_test,
                                train_dict_test, test_dict_test,
                                train_idx_test, test_idx_test, X2_test,
                                y2_test, 'type')
 
     train_dict_test2, test_dict_test2 = \
-        RFR_LASSO.wrapper_tysi(df2_test, clf_test, X_train_test, y_train_test,
+        rfr_lasso.wrapper_tysi(df2_test, clf_test, X_train_test, y_train_test,
                                train_dict_test2, test_dict_test2,
                                train_idx_test, test_idx_test, X2_test,
                                y2_test, 'site')
@@ -346,9 +346,9 @@ def test_rmse_table_tysi():
                     {'test rmse sub': [0.018411594],
                      'test rmse int': [0.040631534]})
 
-    df_26, _, _ = RFR_LASSO.rmse_table_tysi(train_dict_ty, test_dict_ty,
+    df_26, _, _ = rfr_lasso.rmse_table_tysi(train_dict_ty, test_dict_ty,
                                             'type')
-    _, df_int = RFR_LASSO.rmse_table_tysi(train_dict_si, test_dict_si, 'site')
+    _, df_int = rfr_lasso.rmse_table_tysi(train_dict_si, test_dict_si, 'site')
 
     assert df_26.columns[0] == 'train rmse II-VI', \
         'incorrect column in type II-VI dataframe, should be train rmse II-VI'
@@ -361,8 +361,8 @@ def test_rmse_table_tysi():
         'last row of df should be of type str'
 
 
-def test_RFR_LASSO_rmse():
-    rd = RFR_LASSO.RFR_LASSO_rmse(df2_test, d_start=5, folds=2,
+def test_rfr_lasso_rmse():
+    rd = rfr_lasso.rfr_lasso_rmse(df2_test, d_start=5, folds=2,
                                   output_type='none')
 
     assert len(rd) == 3,\
@@ -375,7 +375,7 @@ def test_RFR_LASSO_rmse():
 def test_dict_sorter():
     dic_test = {'a': [1, 2, 3], 'b': [1, 2, 3]}
 
-    dft_test, mean_test, std_test = RFR_LASSO.dict_sorter(dic_test)
+    dft_test, mean_test, std_test = rfr_lasso.dict_sorter(dic_test)
 
     assert isinstance(dft_test[0], str), \
         'value in dft list is of the wrong type, should be str.'
@@ -394,9 +394,9 @@ def test_plotdict_tysi():
                      7.095054806: [-0.78001682,  0.20058657,  0.65550337],
                      5.935974344: [-0.9246399, -0.00948319, -0.41550516]})
 
-    t26, _, _ = RFR_LASSO.plotdict_tysi(test_dict_test, df2_test, 'output',
+    t26, _, _ = rfr_lasso.plotdict_tysi(test_dict_test, df2_test, 'output',
                                         'type')
-    tsub, _ = RFR_LASSO.plotdict_tysi(test_dict_test, df2_test, 'output',
+    tsub, _ = rfr_lasso.plotdict_tysi(test_dict_test, df2_test, 'output',
                                       'site')
 
     assert len(t26) == 2, \
@@ -417,7 +417,7 @@ def test_zip_to_ddict():
     PRED_test_test = [0.38048415, 0.07535999, 0.07535999, 0.20058657,
                       0.38048415, 0.07535999]
 
-    traind, testd = RFR_LASSO.zip_to_ddict(Y_train_test, Y_test_test,
+    traind, testd = rfr_lasso.zip_to_ddict(Y_train_test, Y_test_test,
                                            PRED_train_test, PRED_test_test)
 
     assert len(traind) == len(testd), \
@@ -442,7 +442,7 @@ testd = \
 
 def test_plot_sorter_none():
 
-    traindf, _ = RFR_LASSO.plot_sorter_none(traind, testd, 'output')
+    traindf, _ = rfr_lasso.plot_sorter_none(traind, testd, 'output')
 
     assert traindf.columns[0] == 'dft_train', \
         "train df first column is incorrect, should be 'dft_train'"
@@ -452,7 +452,7 @@ def test_plot_sorter_none():
 
 def test_plot_sorter_type():
 
-    tdf, _, _, df44 = RFR_LASSO.plot_sorter_type(traind, testd, 'output',
+    tdf, _, _, df44 = rfr_lasso.plot_sorter_type(traind, testd, 'output',
                                                  df2_test, 'type')
 
     assert len(df44) == 1, \
@@ -463,7 +463,7 @@ def test_plot_sorter_type():
 
 def test_plot_sorter_site():
 
-    tdf, dfsub, _ = RFR_LASSO.plot_sorter_site(traind, testd, 'output',
+    tdf, dfsub, _ = rfr_lasso.plot_sorter_site(traind, testd, 'output',
                                                df2_test, 'site')
 
     assert len(dfsub) == 2, \
@@ -475,9 +475,9 @@ def test_plot_sorter_site():
          got {}'.format(dfsub.columns[2])
 
 
-def test_RFR_LASSO_plot():
+def test_rfr_lasso_plot():
     train_table, test_table, rmse_table = \
-        RFR_LASSO.RFR_LASSO_plot(df_test, d_start=5, folds=2,
+        rfr_lasso.rfr_lasso_plot(df_test, d_start=5, folds=2,
                                  output_type='none')
 
     assert len(train_table) == len(test_table),\
