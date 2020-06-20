@@ -3,13 +3,11 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from statistics import mean, stdev
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.model_selection import KFold, StratifiedKFold
 from collections import defaultdict, OrderedDict
-import matplotlib.pyplot as plt
 
 from tqdm.notebook import tqdm
 

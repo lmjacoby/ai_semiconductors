@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import KFold, StratifiedKFold
 from collections import defaultdict
 import pandas.api.types as ptypes
 
@@ -128,7 +127,7 @@ def test_rmse_total():
 
     assert isinstance(train_list_test, list), \
         'output type is incorrect. should be list, got {}'\
-        .format(type(train_list_idx))
+        .format(type(train_list_test))
     assert len(test_list_test) > 0, \
         'output list is empty, values are not appending'
     assert X_train_test.shape[0] == y_train_test.shape[0], \
@@ -317,12 +316,12 @@ def test_wrapper_tysi():
 
     assert len(train_dict_test) == 3, \
         'type train dictionary does not have the correct number of entries, \
-        got {}, but should be 3'.format(len(test_dict2))
+        got {}, but should be 3'.format(len(train_dict_test))
     assert test_dict_test['test rmse IV-IV'][0] == 0.019287611100909687, \
         'RMSE value inputted into the incorrect sc type'
     assert len(test_dict_test2) == 2, \
         'site test dictionary does not have the correct number of entries, \
-        got {}, but should be 2'.format(len(test_dict2))
+        got {}, but should be 2'.format(len(test_dict_test2))
     assert len(train_dict_test2['train rmse int']) == 1, \
         'incorrect number of values for RMSE'
 
@@ -468,7 +467,7 @@ def test_plot_sorter_site():
                                                df2_test, 'site')
 
     assert len(dfsub) == 2, \
-        'incorrect length of df. expected 2, got {}'.format(len(df44))
+        'incorrect length of df. expected 2, got {}'.format(len(dfsub))
     assert len(tdf) > len(dfsub), \
         'train df should be longer than individual test dfs'
     assert dfsub.columns[2] == 'stddev_test_sub', \
