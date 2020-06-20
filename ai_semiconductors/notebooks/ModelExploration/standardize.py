@@ -7,7 +7,7 @@
 def standardize(v):
     import numpy as np
     """
-    Takes a single column of a DataFrame and returns a new column 
+    Takes a single column of a DataFrame and returns a new column
     with the data standardized (mean 0, std deviation 1)
     """
     std = v.std()
@@ -16,11 +16,13 @@ def standardize(v):
     else:
         return (v - v.mean()) / std
 
+
 def normalize(v):
     """
-    Takes a single column of a DataFrame and returns a new column 
+    Takes a single column of a DataFrame and returns a new column
     with the data normalized (data range[0,1])
     """
+    import numpy as np
     max_ = v.max()
     min_ = v.min()
     if max_ == min_:
