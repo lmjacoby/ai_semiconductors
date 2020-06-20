@@ -5,7 +5,7 @@
 
 
 import sys
-sys.path.append("../../ai_semiconductors/ai_semiconductors/ModelExploration/")
+sys.path.append("../notebooks/OutlierDetection")
 
 
 def test_KNN_outlier_detection():
@@ -16,7 +16,3 @@ def test_KNN_outlier_detection():
 
 
 # In[ ]:
-
-
-
-

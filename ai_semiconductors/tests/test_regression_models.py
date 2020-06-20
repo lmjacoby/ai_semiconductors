@@ -5,7 +5,7 @@
 
 
 import sys
-sys.path.append("../../ai_semiconductors/ai_semiconductors/ModelExploration/")
+sys.path.append("../notebooks/ModelExploration")
 
 
 # In[15]:
@@ -73,7 +73,3 @@ def test_krr():
 
 
 # In[ ]:
-
-
-
-

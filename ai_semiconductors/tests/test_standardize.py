@@ -5,7 +5,7 @@
 
 
 import sys
-sys.path.append("../../ai_semiconductors/ai_semiconductors/ModelExploration/")
+sys.path.append("../notebooks/ModelExploration")
 
 
 # In[34]:
@@ -16,7 +16,7 @@ def test_standardize():
     import numpy as np
     a = np.array([1, 2, 3, 4, 5])
     std_a = (a - a.mean())/a.std()
-    assert np.alltrue(std_a == standardize.standardize(a)), "standardization is wrong" 
+    assert np.alltrue(std_a == standardize.standardize(a)), "standardization is wrong"
 
 
 # In[38]:
@@ -31,7 +31,3 @@ def test_normalize():
 
 
 # In[ ]:
-
-
-
-
