@@ -1,10 +1,10 @@
+from .. import rfr_lasso
+
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from collections import defaultdict
 import pandas.api.types as ptypes
-
-from ai_semiconductors import rfr_lasso
 
 df_test = pd.read_csv('./unittest_dummy.csv', nrows=5)
 X_test, y_test = rfr_lasso.descriptors_outputs(df_test, d_start=5, o=0)
