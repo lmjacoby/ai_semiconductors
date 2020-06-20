@@ -1,4 +1,7 @@
-from .. import rfr_lasso
+import sys
+sys.path.append("../")
+
+import rfr_lasso
 
 import pandas as pd
 import numpy as np
