@@ -1,13 +1,17 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 import sys
 sys.path.append("../")
-
-import rfr_lasso
-
-import pandas as pd
-import numpy as np
-from sklearn.ensemble import RandomForestRegressor
-from collections import defaultdict
-import pandas.api.types as ptypes
+import rfr_lasso   # noqa: E402
+import pandas as pd  # noqa: E402
+import numpy as np  # noqa: E402
+from sklearn.ensemble import RandomForestRegressor  # noqa: E402
+from collections import defaultdict  # noqa: E402
+import pandas.api.types as ptypes  # noqa: E402
 
 df_test = pd.read_csv('./unittest_dummy.csv', nrows=5)
 X_test, y_test = rfr_lasso.descriptors_outputs(df_test, d_start=5, o=0)
