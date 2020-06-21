@@ -1,9 +1,11 @@
+import sys
+sys.path.append("../")
+import uncertainty_rfr
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import pandas.api.types as ptypes
 
-import uncertainty_rfr
 
 df_test = pd.read_csv('./xiaofeng_lasso/unittest_dummy.csv', nrows=5)
 X_test, y_test = uncertainty_rfr.descriptors_outputs(df_test, d_start=5,
