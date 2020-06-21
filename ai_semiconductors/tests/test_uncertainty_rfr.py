@@ -1,10 +1,11 @@
 import sys
-sys.path.append("../")
 import uncertainty_rfr
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import pandas.api.types as ptypes
+
+sys.path.append("../")
 
 
 df_test = pd.read_csv('./xiaofeng_lasso/unittest_dummy.csv', nrows=5)
@@ -158,7 +159,7 @@ def test_uncertainty_rfr_cv():
 
     assert pred_df_test.shape[0] == folds_test, \
         'Number of row in pred_df_test array should equal number of folds, \
-        expected {}, got {}'.format((folds_test, pred_df_test.shape[0]))
+        expected {}, got {}'.format(folds_test, pred_df_test.shape[0])
     assert err_df_test[err_df_test.columns[4]][0] == 0.0, \
         'Expected 0.0 in "true val" with true_y set to false, instead got a \
         different val'
