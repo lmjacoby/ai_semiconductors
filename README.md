@@ -25,4 +25,4 @@ This project is licensed under the MIT License - see LICENSE.md for details.
 The data to train our machine learning models came from our project supervisors at ANL. They also contribute guidance and support in building our machine learning tools.
 
 This project is part of the UW DIRECT Capstone 2020, and is supported by Argonne National Lab.
-<img height="100" align="right" src="ai_semiconductors/static/ArgonneLogo.jpg"> <img height="100" align="left" src="ai_semiconductors/static/DIRECTlogo.png">
+<img height="100" align="right" src="https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/Argonnelogo.png"> <img height="100" align="left" src="ai_semiconductors/static/DIRECTlogo.png">
