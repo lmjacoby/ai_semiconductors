@@ -3,7 +3,7 @@
 ---
 **Case 1**
 
-A scientist would like to examine theoretical information on how certain defects such as vacancies, native or impurity interstitials or substitutions, surface states, and grain boundaries can influence their optoelectronic properties.
+A scientist would like to examine theoretical information on how certain substitutional or interstitial defect can influence their optoelectronic properties.
 * Native defects determine the equilibrium Fermi level in the semiconductor, and thus the nature of conductivity (p-type, n-type or intrinsic) and charge carriers.
 ---
 **Case 2**
