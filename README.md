@@ -1,3 +1,6 @@
+<img height="150" align="left" src="https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/AI_SC_logo.png">
+
+
 [![Build Status](https://travis-ci.com/lmjacoby/ai_semiconductors.svg?branch=master)](https://travis-ci.com/lmjacoby/ai_semiconductors)  
 
 # AI Semiconductors
