@@ -5,7 +5,7 @@
 
 
 import sys
-sys.path.append("../notebooks/ModelExploration")
+sys.path.append("../")
 
 
 # In[15]:

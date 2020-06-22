@@ -5,7 +5,7 @@
 
 
 import sys
-sys.path.append("../notebooks/OutlierDetection")
+sys.path.append("../")
 
 
 def test_KNN_outlier_detection():
