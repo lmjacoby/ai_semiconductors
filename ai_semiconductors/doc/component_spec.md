@@ -6,4 +6,8 @@
     * **AB compound** - 'AlAs', 'AlN', 'AlP', 'AlSb', 'BAs', 'BN', 'BP', 'BSb', 'C', 'CdO', 'CdS', 'CdSe', 'CdTe', 'GaAs', 'GaN', 'GaP', 'GaSb', 'Ge', 'GeC', 'GeSn', 'InAs', 'InN', 'InP', 'InSb', 'Si', 'SiC', 'SiGe', 'SiSn', 'Sn', 'SnC', 'ZnO', 'ZnS', 'ZnSe', 'ZnTe'
     * **Impurity** - 'Ag', 'Al', 'As', 'Au', 'B', 'Ba', 'Be', 'Bi', 'Br', 'C', 'Ca', 'Cd', 'Ce', 'Cl', 'Co', 'Cr', 'Cs', 'Cu', 'Dy', 'Er', 'Eu', 'F', 'Fe', 'Ga', 'Gd', 'Ge', 'Hf', 'Hg', 'Ho', 'I', 'In', 'Ir', 'K', 'La', 'Li', 'Lu', 'Mg', 'Mn', 'Mo', 'N', 'Na', 'Nb', 'Nd', 'Ni', 'O', 'Os', 'P', 'Pb', 'Pd', 'Pm', 'Pr', 'Pt', 'Rb', 'Re', 'Rh', 'Ru', 'S', 'Sb', 'Sc', 'Se', 'Si', 'Sm', 'Sn', 'Sr', 'Ta', 'Tb', 'Tc', 'Te', 'Ti', 'Tl', 'Tm', 'V', 'W', 'Y', 'Yb', 'Zn', 'Zr'
     * **Site** - 'M_A', 'M_B', 'M_i_A', 'M_i_B', 'M_i_neut'
-  *  **Out
+  * **Output**:
+    * Figure that displays:
+      * Six predicted transition levels plotted with the PBE calculated band gap for the inputted semiconductor/impurity/site system
+      * Two prediction formation energy levels for the inputted semiconductor/impurity/site system
+    * Dataframe of the eight outputted prediction values.
