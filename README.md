@@ -1,4 +1,4 @@
-<img height="100" align="left" src="https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/AI_semiconductor_logo.JPG">  
+<img height="100" align="left" src="https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/AI_semiconductor_logo.JPG"><br/>
 
 [![Build Status](https://travis-ci.com/lmjacoby/ai_semiconductors.svg?branch=master)](https://travis-ci.com/lmjacoby/ai_semiconductors)  
 
