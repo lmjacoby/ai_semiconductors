@@ -1,7 +1,8 @@
 <img height="125" align="left" src="https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/AI_semicond_logo4.jpg">
 
 
-[![Build Status](https://travis-ci.com/lmjacoby/ai_semiconductors.svg?branch=master)](https://travis-ci.com/lmjacoby/ai_semiconductors) 
+[![Build Status](https://travis-ci.com/lmjacoby/ai_semiconductors.svg?branch=master)](https://travis-ci.com/lmjacoby/ai_semiconductors)
+![License](https://img.shields.io/github/license/Chenyi-Mao/formulation)
 
 We are working with researchers at Argonne National Lab to build a tool that uses machine learning models to effectively and accuratley predict the formation energy and transition energy levels of novel impurity doped II-VI, III-V, and IV-IV semiconductors and their alloys. This project aims to assist scientists and researchers in the field of semiconductor research as they explore novel materials with targeted optoelectronic properties. We are currently building three different machine learning models based on Lasso Ridge Regression, Random Forest Regression and Neural Networks.
 
