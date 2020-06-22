@@ -20,7 +20,7 @@ There's an (almost) endless wealth of impurity doped semiconductors to explore, 
 3. Select a site for the impurity dopant from a dropdown menu. The choices are substitutional doping for either A or B of the parent semiconductor (M_A, M_B) or interstitial doping in an A-rich site, B-rich site or neutral site (M_i_A, M_i_B, M_i_neut)
 4. The tool will output a table and plot of predicted formation energies, and transition levels for the compound of choice (8 targets in total, 2 formation energies and 6 transition energy levels). There will be three different predictions per target from a kernel ridge regression model, random forest regression model, and neural network.
 
-To get started, navigate [here](ai_semiconductors/prediction_tool/README.md).
+To get started, navigate [here](ai_semiconductors/prediction_tool).
 
 ### Repository Structure
 This repository serves as a home for our prediction tool, and example notebooks to display the code we wrote to build our machine learning models and make predictions. The data we used to train our models is **private data**, so we have put example notebooks in the notebooks folder if you are interested in checking out our code in action.
