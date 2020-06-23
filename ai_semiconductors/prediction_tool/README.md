@@ -1,5 +1,3 @@
-[here](http://localhost:8888/apps/Capstone/pred_tool/Energy_plot2-Copy1.ipynb?appmode_scroll=0)
-
 ### AI Semiconductors Prediction Tool
 Welcome to our impurity doped semiconductor prediction tool. Feel free to check out the example notebook we have, and when you're ready you can clone the repo and play around with tool in the jupyter notebook. The tool has the ability to predict formation energies and transition levels for ~12,500 impurity doped semiconductor compounds, so explore around for however long you would like!
 
