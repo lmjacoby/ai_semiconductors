@@ -7,6 +7,8 @@ Welcome to our impurity doped semiconductor prediction tool. Feel free to click 
 3. Select a site for the impurity dopant from a dropdown menu. The choices are substitutional doping for either A or B of the parent semiconductor (M_A, M_B) or interstitial doping in an A-rich site, B-rich site or neutral site (M_i_A, M_i_B, M_i_neut)
 4. The tool will output a table and plots of predicted formation energies, and transition levels for the compound of choice (8 targets in total, 2 formation energies and 6 transition energy levels). There will be three different predictions per target from a kernel ridge regression model, random forest regression model, and neural network.
 
-CLICK HERE -> [APP](https://notebooks.gesis.org/binder/jupyter/user/lmjacoby-ai_semiconductors-km62aw19/apps/ai_semiconductors/prediction_tool/Energy_plot.ipynb)<-
+Note: we cannot make the "true" DFT data available at this time, but please stay tuned as we will be able to release it in the fall of 2020.
 
-Disclaimer: we cannot make the "true" DFT data available at this time, but please stay tuned as we will be able to release it in the fall of 2020.
+CLICK HERE -> [APP](https://mybinder.org/v2/gh/lmjacoby/ai_semiconductors/master?urlpath=%2Fapps%2Fai_semiconductors%2Fprediction_tool%2FEnergy_plot.ipynb)<-
+
+Our prediction tool was made with ``appmode``, to learn more check out their repository: https://github.com/oschuett/appmode
