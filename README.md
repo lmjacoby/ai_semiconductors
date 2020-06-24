@@ -22,6 +22,7 @@ There's an (almost) endless wealth of impurity doped semiconductors to explore, 
 
 To get started, navigate [here](https://gesis.mybinder.org/binder/v2/gh/lmjacoby/ai_semiconductors/6ab5e5351aec44d8c9adf4413d04d46c06ccc6c4)
 
+![prediction tool gif](https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/predict_tool_app.gif)
 ### Repository Structure
 This repository serves as a home for our prediction tool, and example notebooks to display the code we wrote to build our machine learning models and make predictions. The data we used to train our models is **private data**, so we have put example notebooks in the notebooks folder if you are interested in checking out our code in action.
 
