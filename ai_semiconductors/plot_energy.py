@@ -46,14 +46,14 @@ def plot_energy(Impurity, AB, Site):
     ax.plot(np.linspace(-1, 24, 100), [0]*100,
             label='VBM', color='r', linewidth=3, alpha=0.2)
     ax.margins(0.2)
-    ax.set_ylabel('Transition level (ev)')
-    ax.set_title('Transition level Prediction')
+    ax.set_ylabel('Transition level (ev)', fontsize=35)
+    ax.set_title('Transition level Prediction', fontsize=35)
 
     # ylabel create
     ax2 = ax.twinx()
     ax2.set_ylim(ax.get_ylim())
     ax2.set_yticks([PBE_gap, 0])
-    ax2.set_yticklabels(['CBM', 'VBM'])
+    ax2.set_yticklabels(['CBM', 'VBM'], fontsize=25)
 
     # xlabel create
     if DFT_exist:
@@ -70,7 +70,8 @@ def plot_energy(Impurity, AB, Site):
         ax2.set_xticks([2.5, 5.5, 8.5, 11.5, 14.5], minor=True)
     ax.grid(which='minor', alpha=0.8)
     ax.set_xlim(-1, len(TL_energies))
-
+    ax.tick_params(axis='both', which='major', labelsize=18)
+    ax.tick_params(axis='both', which='minor', labelsize=18)
     # legend
     if DFT_exist:
         custom_lines = [Line2D([0], [0], color='black', lw=4),
@@ -81,7 +82,7 @@ def plot_energy(Impurity, AB, Site):
         custom_lines = [Line2D([0], [0], color='green', lw=4),
                         Line2D([0], [0], color='orange', lw=4),
                         Line2D([0], [0], color='blue', lw=4)]
-    ax.legend(custom_lines, lab, loc='upper left', prop={'size': 15})
+    ax.legend(custom_lines, lab, loc='upper left', prop={'size': 25})
     # Formation Energy
     x = [i for i in range(len(FM_energies))]
     minor_ticks = np.arange(np.min(FM_energies)-2, np.max(FM_energies)+1, 0.5)
@@ -100,8 +101,8 @@ def plot_energy(Impurity, AB, Site):
     # plot uncertainty errorbar
     ax.errorbar(x, FM_energies, yerr=FM_std, fmt='none', c=colors[z])
     ax.margins(0.2)
-    ax.set_ylabel('Formation Energy (ev)')
-    ax.set_title('Formation Energy Prediction')
+    ax.set_ylabel('Formation Energy (ev)', fontsize=35)
+    ax.set_title('Formation Energy Prediction', fontsize=35)
 
     # xlabel create
     if DFT_exist:
@@ -119,7 +120,8 @@ def plot_energy(Impurity, AB, Site):
     ax2.axes.get_yaxis().set_visible(False)
     ax.grid(which='minor', alpha=0.8)
     ax.set_xlim(-1, len(FM_energies))
-
+    ax.tick_params(axis='both', which='major', labelsize=18)
+    ax.tick_params(axis='both', which='minor', labelsize=18)
     # legend
     if DFT_exist:
         custom_lines = [Line2D([0], [0], color='black', lw=4),
@@ -130,7 +132,7 @@ def plot_energy(Impurity, AB, Site):
         custom_lines = [Line2D([0], [0], color='green', lw=4),
                         Line2D([0], [0], color='orange', lw=4),
                         Line2D([0], [0], color='blue', lw=4)]
-    ax.legend(custom_lines, lab, loc='upper left', prop={'size': 15})
+    ax.legend(custom_lines, lab, loc='upper left', prop={'size': 25})
     plt.show()
     if DFT_exist:
         summary = {'DFT': [], 'KRR': [], 'RFR': [], 'NN': []}
