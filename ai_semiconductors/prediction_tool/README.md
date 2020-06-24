@@ -1,5 +1,6 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lmjacoby/ai_semiconductors/appmode/master?filepath=%2Fai_semiconductors%2Fprediction_tool%2FEnergy_plot.ipynb)
 
+
 ### AI Semiconductors Prediction Tool
 Welcome to our impurity doped semiconductor prediction tool. Feel free to check out the example notebook we have, and when you're ready click on the button above to use the app live, without cloning or installing anything! The tool has the ability to predict formation energies and transition levels for ~12,500 impurity doped semiconductor compounds, so explore around for however long you would like!
 
