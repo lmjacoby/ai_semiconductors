@@ -8,6 +8,6 @@ Welcome to our impurity doped semiconductor prediction tool. Feel free to check 
 4. The tool will output a table and plots of predicted formation energies, and transition levels for the compound of choice (8 targets in total, 2 formation energies and 6 transition energy levels). There will be three different predictions per target from a kernel ridge regression model, random forest regression model, and neural network.
 
 **CLICK HERE**
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lmjacoby/ai_semiconductors/master?filepath=%2Fai_semiconductors%2Fprediction_tool%2Fapps%2FEnergy_plot.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lmjacoby/ai_semiconductors/master/ai_semiconductors/prediction_tool?urlpath=%2Fapps%2FEnergy_plot.ipynb)
 
 Disclaimer: we cannot make the "true" DFT data available at this time, but please stay tuned as we will be able to release it in the fall of 2020.
