@@ -21,7 +21,3 @@ def test_plot_energy():
 
 
 # In[ ]:
-
-
-
-
