@@ -251,7 +251,7 @@ def test_rmse_calculator():
 
     assert len(test_rmse_df35) == len(test_rmse_df44), \
         'rmse dataframes should be the same length, instead got III-V = {} \
-    and IV-IV = {}'.format(len(test_rmse_df35) == len(test_rmse_df44))
+    and IV-IV = {}'.format(len(test_rmse_df35), len(test_rmse_df44))
 
     test_rmse_dfsub, test_rmse_dfint = \
         rfr_model.rmse_calculator(test_dtrain, test_dtest, 'site')
@@ -262,7 +262,7 @@ def test_rmse_calculator():
 
     assert len(test_rmse_dfsub) == len(test_rmse_dfint), \
         'rmse dataframes should be the same length, instead got sub = {} \
-    and int = {}'.format(len(test_rmse_dfsub) == len(test_rmse_dfint))
+    and int = {}'.format(len(test_rmse_dfsub), len(test_rmse_dfint))
 
 
 X, y = rfr_model.descriptors_outputs(df_test, d_start=5, o=0)
