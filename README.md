@@ -36,11 +36,23 @@ This repository serves as a home for our prediction tool, and example notebooks 
   - static
   - tests
 
-#### Authors
-- Robert Biegaj
+#### GitHub Authors
 - Xiaofeng Xiang
 - Laura Jacoby
+- Robert Biegaj
 
+#### Manuscript
+A manuscript describing the data, ML models, and prediction results can be found [here](www.arxiv.org). The following authors contributed to this work:
+University of Washington
+- Xiaofeng Xiang, xiaofx2@uw.edu
+- Laura Jacoby, ljacoby@uw.edu
+- Robert Biegaj, rbiegaj@uw.edu
+- Scott T. Dunham, dunham@ece.uw.edu
+- Daniel R. Gamelin, gamelin@chem.washington.edu
+Purdue University
+- Arun Mannodi-Kanakkithodi, amannodi@purdue.edu
+Argonne National Lab
+- Maria K.Y. Chan, mchan@anl.gov
 #### License
 This project is licensed under the MIT License - see LICENSE.md for details.
 
