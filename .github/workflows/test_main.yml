@@ -16,6 +16,7 @@ jobs:
         DOCKER_USERNAME: xiaofx2+ai_semi
         DOCKER_PASSWORD: 46K2IUVFK3FS3XE6CF3SA9Q6XDH4Y75OHJYFL90H7Z7EA039Y32PKQBEHBQYXF0A
         DOCKER_REGISTRY: "quay.io"
-        BINDER_CACHE: true
+        #BINDER_CACHE: true
+        MYBINDERORG_TAG: ${{ github.event.ref }}
         IMAGE_NAME: "xiaofx2/ai_semi"
 
