@@ -1,12 +1,20 @@
-name: Binder
+name: Build container image
+
 on: [push]
 
 jobs:
-  Create-MyBinderOrg-Cache:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: cache binder build on mybinder.org
+
+    - name: checkout files in repo
+      uses: actions/checkout@main
+
+    - name: update jupyter dependencies with repo2docker
       uses: jupyterhub/repo2docker-action@master
-      with:
-        NO_PUSH: true
-        MYBINDERORG_TAG: ${{ github.event.ref }} # This builds the container on mybinder.org with the branch that was pushed on.
+      with: # make sure username & password/token matches your registry
+        DOCKER_USERNAME: xiaofx2+ai_semi
+        DOCKER_PASSWORD: 46K2IUVFK3FS3XE6CF3SA9Q6XDH4Y75OHJYFL90H7Z7EA039Y32PKQBEHBQYXF0A
+        DOCKER_REGISTRY: "quay.io"
+        IMAGE_NAME: "xiaofx2/ai_semi"
+
