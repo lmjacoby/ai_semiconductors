@@ -1,1 +1,0 @@
-web: gunicorn predicttool:app --timeout 45
