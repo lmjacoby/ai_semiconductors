@@ -15,11 +15,11 @@ def preprocessing(Impurity, AB, Site):
     import numpy as np
     import pandas as pd
     # read prediction data and DFT data
-    KRR = pd.read_csv('./prediction_tool/data/Prediction_KRR.csv')
-    RFR = pd.read_csv('./prediction_tool/data/Prediction_RFR.csv')
-    NN = pd.read_csv('./prediction_tool/data/Prediction_NN.csv')
-    Fullchem = pd.read_csv('./prediction_tool/data/ML_data_v2.csv')
-    DFT = pd.read_csv('./prediction_tool/data/DFT.csv')
+    KRR = pd.read_csv('../prediction_tool/data/Prediction_KRR.csv')
+    RFR = pd.read_csv('../prediction_tool/data/Prediction_RFR.csv')
+    NN = pd.read_csv('../prediction_tool/data/Prediction_NN.csv')
+    Fullchem = pd.read_csv('../prediction_tool/data/ML_data_v2.csv')
+    DFT = pd.read_csv('../prediction_tool/data/DFT.csv')
     values = ['dH (A-rich)', 'dH (B-rich)', '(+3/+2)', '(+2/+1)',
               '(+1/0)', '(0/-1)', '(-1/-2)', '(-2/-3)']
     std = ['dH (A-rich) std', 'dH (B-rich) std', '(+3/+2) std',
