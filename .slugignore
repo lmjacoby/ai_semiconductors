@@ -1,4 +1,7 @@
-/tests
-/static
-/notebooks
-/doc
+/tests/*
+/static/*
+/notebooks/*
+/doc/*
+*.py
+!plot_energy.py
+!preprocessing.py
