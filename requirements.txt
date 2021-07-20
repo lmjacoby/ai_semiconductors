@@ -3,7 +3,7 @@ numpy
 matplotlib
 pyod
 tqdm
-scikit_lear
+scikit_learn
 autopep8
 ipython
 Keras
