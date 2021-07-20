@@ -1,9 +1,15 @@
+ai_semiconductors/__pycache__/*
 ai_semiconductors/doc/*
 ai_semiconductors/notebooks/*
 ai_semiconductors/static/*
 ai_semiconductors/tests/*
+KNN_outlier_detection.py
+neural_network.py
+regression_models.py
+rfr_model.py
+standardize.py
+uncertainty_rfr.py
 /binder/*
 LICENSE
 Procfile
-neural_network.py
-rfr_model.py
+README.md
