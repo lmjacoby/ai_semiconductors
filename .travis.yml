@@ -28,7 +28,6 @@ script:
     - coverage run -m unittest discover
 deploy:
   provider: heroku:git
-  api_key: 908c203a-f5ae-45c9-bcac-dd08d51afcc9
   edge: true
 
 # generate a coverage report to send to back to user
