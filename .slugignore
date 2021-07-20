@@ -1,6 +1,9 @@
-ai_semiconductors/tests/*
-ai_semiconductors/static/*
-ai_semiconductors/notebooks/*
 ai_semiconductors/doc/*
+ai_semiconductors/notebooks/*
+ai_semiconductors/static/*
+ai_semiconductors/tests/*
+/binder/*
+LICENSE
+Procfile
 neural_network.py
 rfr_model.py
