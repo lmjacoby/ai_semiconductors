@@ -11,5 +11,4 @@ ai_semiconductors/standardize.py
 ai_semiconductors/uncertainty_rfr.py
 /binder/*
 LICENSE
-Procfile
 README.md
