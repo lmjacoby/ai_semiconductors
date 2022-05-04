@@ -6,7 +6,7 @@
 
 We are working with researchers at Argonne National Lab to build a tool that uses machine learning models to effectively and accurately predict the formation energy and transition energy levels of novel impurity doped II-VI, III-V, and IV-IV semiconductors and their alloys. This project aims to assist scientists and researchers in the field of semiconductor research as they explore novel materials with targeted optoelectronic properties. We are currently building three different machine learning models based on Kernel Ridge Regression, Random Forest Regression and Neural Networks.
 
-If you are interested in learning more, check out our [paper](<https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X>)
+If you are interested in learning more, check out our [paper](<https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X>).
 
 
 ### Prediction Tool
@@ -38,12 +38,12 @@ This repository serves as a home for our prediction tool, and example notebooks 
   - static
   - tests
 
-#### GitHub Authors
+### GitHub Authors
 - Xiaofeng Xiang
 - Laura Jacoby
 - Robert Biegaj
 
-#### Manuscript
+### Manuscript
 A manuscript describing the data, ML models, and prediction results can be found [here](<https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X)>). The following authors contributed to this work:
 
 University of Washington
@@ -59,7 +59,7 @@ Purdue University
 Argonne National Lab
 - Maria K.Y. Chan, mchan@anl.gov
 
-#### Citation
+### Citation
 If you find this prediction tool useful, please cite the following in your research:
 ```
 Mannodi-Kanakkithodi, A., Xiang, X., Jacoby, L., Biegaj, R., Dunham, S. T., Gamelin, D. R., & Chan, M. K. (2022). Universal Machine Learning Framework for Defect Predictions in Zinc Blende Semiconductors. Patterns, 3(3), 100450.
@@ -78,10 +78,10 @@ Mannodi-Kanakkithodi, A., Xiang, X., Jacoby, L., Biegaj, R., Dunham, S. T., Game
   publisher={Elsevier}
 }
 ```
-#### License
+### License
 This project is licensed under the MIT License - see LICENSE.md for details.
 
-#### Acknowledgments
+### Acknowledgments
 The data to train our machine learning models came from our project supervisors at Argonne National Lab. They also contributed guidance and support in building our machine learning tools.
 
 This project was part of the University of Washington DIRECT 2020 Capstone. It was funded under the Data Intensive Research Enabling Clean Technology (DIRECT) NSF National Research Traineeship (DGE-1633216) and was also supported by Argonne National Lab.
