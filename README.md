@@ -6,6 +6,8 @@
 
 We are working with researchers at Argonne National Lab to build a tool that uses machine learning models to effectively and accurately predict the formation energy and transition energy levels of novel impurity doped II-VI, III-V, and IV-IV semiconductors and their alloys. This project aims to assist scientists and researchers in the field of semiconductor research as they explore novel materials with targeted optoelectronic properties. We are currently building three different machine learning models based on Kernel Ridge Regression, Random Forest Regression and Neural Networks.
 
+If you are interested in learning more, check out our [paper][https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X]
+
 
 ### Prediction Tool
 The chemical space of impurity doped semiconductors is vast, and we wanted to create a tool to allow researchers to quickly scan through compounds for targeted properties. So, we created this prediction tool that allows a user to explore the formation energies and transition energy levels of ~12,500 doped semiconductor compounds.
@@ -42,7 +44,7 @@ This repository serves as a home for our prediction tool, and example notebooks 
 - Robert Biegaj
 
 #### Manuscript
-A manuscript describing the data, ML models, and prediction results can be found [here](www.arxiv.org). The following authors contributed to this work:
+A manuscript describing the data, ML models, and prediction results can be found [here][https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X]. The following authors contributed to this work:
 
 University of Washington
 - Xiaofeng Xiang, xiaofx2@uw.edu
@@ -56,11 +58,31 @@ Purdue University
 
 Argonne National Lab
 - Maria K.Y. Chan, mchan@anl.gov
+
+#### Citation
+If you find this prediction tool useful, please cite the following in your research:
+```
+Mannodi-Kanakkithodi, A., Xiang, X., Jacoby, L., Biegaj, R., Dunham, S. T., Gamelin, D. R., & Chan, M. K. (2022). Universal Machine Learning Framework for Defect Predictions in Zinc Blende Semiconductors. Patterns, 3(3), 100450.
+```
+
+**Bibtex**
+```
+@article{mannodi2022universal,
+  title={Universal machine learning framework for defect predictions in zinc blende semiconductors},
+  author={Mannodi-Kanakkithodi, Arun and Xiang, Xiaofeng and Jacoby, Laura and Biegaj, Robert and Dunham, Scott T and Gamelin, Daniel R and Chan, Maria KY},
+  journal={Patterns},
+  volume={3},
+  number={3},
+  pages={100450},
+  year={2022},
+  publisher={Elsevier}
+}
+```
 #### License
 This project is licensed under the MIT License - see LICENSE.md for details.
 
 #### Acknowledgments
-The data to train our machine learning models came from our project supervisors at ANL. They also contribute guidance and support in building our machine learning tools.
+The data to train our machine learning models came from our project supervisors at Argonne National Lab. They also contributed guidance and support in building our machine learning tools.
 
-This project is part of the UW DIRECT Capstone 2020, and is supported by Argonne National Lab.
+This project was part of the University of Washington DIRECT 2020 Capstone. It was funded under the Data Intensive Research Enabling Clean Technology (DIRECT) NSF National Research Traineeship (DGE-1633216) and was also supported by Argonne National Lab.
 <img height="100" align="right" src="https://github.com/lmjacoby/ai_semiconductors/blob/master/ai_semiconductors/static/Argonnelogo.png"> <img height="100" align="left" src="ai_semiconductors/static/DIRECTlogo.png">
