@@ -44,7 +44,7 @@ This repository serves as a home for our prediction tool, and example notebooks 
 - Robert Biegaj
 
 #### Manuscript
-A manuscript describing the data, ML models, and prediction results can be found [here][https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X]. The following authors contributed to this work:
+A manuscript describing the data, ML models, and prediction results can be found [here](<https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X>). The following authors contributed to this work:
 
 University of Washington
 - Xiaofeng Xiang, xiaofx2@uw.edu
