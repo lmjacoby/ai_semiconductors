@@ -6,7 +6,7 @@
 
 We are working with researchers at Argonne National Lab to build a tool that uses machine learning models to effectively and accurately predict the formation energy and transition energy levels of novel impurity doped II-VI, III-V, and IV-IV semiconductors and their alloys. This project aims to assist scientists and researchers in the field of semiconductor research as they explore novel materials with targeted optoelectronic properties. We are currently building three different machine learning models based on Kernel Ridge Regression, Random Forest Regression and Neural Networks.
 
-If you are interested in learning more, check out our [paper][https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X]
+If you are interested in learning more, check out our [paper](<https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X>)
 
 
 ### Prediction Tool
@@ -44,7 +44,7 @@ This repository serves as a home for our prediction tool, and example notebooks 
 - Robert Biegaj
 
 #### Manuscript
-A manuscript describing the data, ML models, and prediction results can be found [here][https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X]. The following authors contributed to this work:
+A manuscript describing the data, ML models, and prediction results can be found [here](<https://www.cell.com/patterns/fulltext/S2666-3899(22)00023-X)>). The following authors contributed to this work:
 
 University of Washington
 - Xiaofeng Xiang, xiaofx2@uw.edu
